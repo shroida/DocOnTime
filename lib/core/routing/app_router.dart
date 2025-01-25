@@ -8,7 +8,6 @@ import 'routes.dart';
 class AppRouter {
   final GoRouter router = GoRouter(
     routes: [
-      // Route for Onboarding Screen
       GoRoute(
         path: Routes.splashScreen,
         builder: (context, state) => const SplashScreen(),
@@ -17,12 +16,11 @@ class AppRouter {
         path: Routes.onBoardingScreen,
         builder: (context, state) => const OnBoadringScreen(),
       ),
-      // Route for Login Screen
       GoRoute(
         path: Routes.loginScreen,
         builder: (context, state) => const LoginScreen(),
       ),
     ],
-    initialLocation: Routes.splashScreen, // Set the initial route
+    initialLocation: Routes.splashScreen,
   );
 }
