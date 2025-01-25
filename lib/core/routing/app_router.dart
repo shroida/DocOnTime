@@ -12,6 +12,10 @@ class AppRouter {
         path: Routes.onBoardingScreen,
         builder: (context, state) => const OnBoadringScreen(),
       ),
+      GoRoute(
+        path: Routes.onBoardingScreen,
+        builder: (context, state) => const OnBoadringScreen(),
+      ),
       // Route for Login Screen
       GoRoute(
         path: Routes.loginScreen,
