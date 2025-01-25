@@ -1,16 +1,25 @@
-# doc_on_time
+# Doc On Time
+Doc On Time is a Flutter-based application designed for scheduling doctor appointments efficiently. It provides a seamless user experience by integrating core functionalities like appointment booking, doctor profiles, and notifications.
 
-A new Flutter project.
+### 🛠️ Project Structure
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![files structure](https://github.com/user-attachments/assets/a1c47906-dc85-487e-a5a7-7c4bc10999c1)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🧩 Core Modules
+#### 1. Dependency Injection
+Handles service registration and provides centralized access to instances using libraries like get_it.
+#### 2. Networking
+API service setup using dio.
+Handles REST API calls and response parsing.
+Interceptor for adding authentication tokens and logging.
+#### 3. Routing
+Centralized route definitions using GoRouter or Navigator 2.0.
+Organized navigation flow for modularity.
+#### 4. Helpers
+Collection of utility functions (e.g., date formatters, validators, etc.).
+#### 5. Theming
+Custom ThemeData for light and dark modes.
+Centralized colors, fonts, and styles.
+#### 6. Widgets
+Contains reusable and shared widgets like buttons, cards, and loading spinners.
