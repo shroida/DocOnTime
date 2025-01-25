@@ -1,16 +1,35 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:doc_on_time/core/theming/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
-import 'package:doc_on_time/core/routing/app_router.dart';
 
 class DocApp extends StatelessWidget {
   const DocApp({
     super.key,
     required this.appRouter,
   });
-  final AppRouter appRouter;
+  final GoRouter appRouter;
+
   @override
   Widget build(BuildContext context) {
-    return Placeholder();
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true, 
+      builder: (context, child) {
+        return MaterialApp.router(
+          debugShowCheckedModeBanner: false,
+          title: 'Doc on Time',
+          theme: ThemeData(
+            primaryColor: ColorsManagers.mainBlue,
+            scaffoldBackgroundColor: Colors.white,
+          ),
+          
+          routerDelegate: appRouter.routerDelegate,
+          routeInformationParser: appRouter.routeInformationParser,
+          routeInformationProvider: appRouter.routeInformationProvider,
+        );
+      },
+    );
   }
 }
