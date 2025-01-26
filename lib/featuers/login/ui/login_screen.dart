@@ -2,6 +2,7 @@ import 'package:doc_on_time/core/theming/app_styles.dart';
 import 'package:doc_on_time/core/widgets/app_text_button.dart';
 import 'package:doc_on_time/featuers/login/logic/login_cubit.dart';
 import 'package:doc_on_time/featuers/login/ui/widgets/email_and_password.dart';
+import 'package:doc_on_time/featuers/login/ui/widgets/terms_and_conditions_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
