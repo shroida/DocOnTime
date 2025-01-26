@@ -1,4 +1,5 @@
 import 'package:doc_on_time/featuers/login/logic/login_cubit.dart';
+import 'package:doc_on_time/featuers/login/ui/widgets/passwords_validations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -82,13 +83,13 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             },
           ),
           verticalSpace(24),
-          // PasswordValidations(
-          //   hasLowerCase: hasLowercase,
-          //   hasUpperCase: hasUppercase,
-          //   hasSpecialCharacters: hasSpecialCharacters,
-          //   hasNumber: hasNumber,
-          //   hasMinLength: hasMinLength,
-          // ),
+          PasswordValidations(
+            hasLowerCase: hasLowercase,
+            hasUpperCase: hasUppercase,
+            hasSpecialCharacters: hasSpecialCharacters,
+            hasNumber: hasNumber,
+            hasMinLength: hasMinLength,
+          ),
         ],
       ),
     );
