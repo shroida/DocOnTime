@@ -1,4 +1,5 @@
 import 'package:doc_on_time/core/di/dependency_injection.dart';
+import 'package:doc_on_time/featuers/home/ui/home_screen.dart';
 import 'package:doc_on_time/featuers/login/logic/login_cubit.dart';
 import 'package:doc_on_time/featuers/login/ui/login_screen.dart';
 import 'package:doc_on_time/featuers/onboadring/onboadring_screen.dart';
@@ -18,6 +19,10 @@ class AppRouter {
       GoRoute(
         path: Routes.onBoardingScreen,
         builder: (context, state) => const OnBoadringScreen(),
+      ),
+      GoRoute(
+        path: Routes.homeScreen,
+        builder: (context, state) => const HomeScreen(),
       ),
       GoRoute(
         path: Routes.loginScreen,

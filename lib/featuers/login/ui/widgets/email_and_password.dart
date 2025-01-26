@@ -1,3 +1,4 @@
+import 'package:doc_on_time/core/helpers/app_regex.dart';
 import 'package:doc_on_time/featuers/login/logic/login_cubit.dart';
 import 'package:doc_on_time/featuers/login/ui/widgets/passwords_validations.dart';
 import 'package:flutter/material.dart';
@@ -28,21 +29,21 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
   void initState() {
     super.initState();
     passwordController = context.read<LoginCubit>().passwordController;
-    // setupPasswordControllerListener();
+    setupPasswordControllerListener();
   }
 
-  // void setupPasswordControllerListener() {
-  //   passwordController.addListener(() {
-  //     setState(() {
-  //       hasLowercase = AppRegex.hasLowerCase(passwordController.text);
-  //       hasUppercase = AppRegex.hasUpperCase(passwordController.text);
-  //       hasSpecialCharacters =
-  //           AppRegex.hasSpecialCharacter(passwordController.text);
-  //       hasNumber = AppRegex.hasNumber(passwordController.text);
-  //       hasMinLength = AppRegex.hasMinLength(passwordController.text);
-  //     });
-  //   });
-  // }
+  void setupPasswordControllerListener() {
+    passwordController.addListener(() {
+      setState(() {
+        hasLowercase = AppRegex.hasLowerCase(passwordController.text);
+        hasUppercase = AppRegex.hasUpperCase(passwordController.text);
+        hasSpecialCharacters =
+            AppRegex.hasSpecialCharacter(passwordController.text);
+        hasNumber = AppRegex.hasNumber(passwordController.text);
+        hasMinLength = AppRegex.hasMinLength(passwordController.text);
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
