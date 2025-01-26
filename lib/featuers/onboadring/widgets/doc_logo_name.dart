@@ -16,7 +16,7 @@ class DocLogoName extends StatelessWidget {
         SizedBox(
           width: 10.w,
         ),
-        Text('DocOnTime', style: AppStyles.black24Weight700)
+        Text('DocOnTime', style: AppStyles.font24BlackBold)
       ],
     );
   }

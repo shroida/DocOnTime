@@ -15,7 +15,7 @@ class DescriptionText extends StatelessWidget {
         children: [
           Text(
             'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
-            style: AppStyles.grey13Reg,
+            style: AppStyles.font13GrayRegular,
             textAlign: TextAlign.center,
           )
         ],

@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 TypewriterAnimatedText(
                   'DocOnTime',
                   textStyle: const TextStyle(
-                    color: ColorsManagers.mainDark,
+                    color: ColorsManager.mainDark,
                     fontSize: 40, // Reduced for better scaling
                     fontWeight: FontWeight.bold,
                   ),
