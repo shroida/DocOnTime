@@ -4,9 +4,14 @@ import 'package:doc_on_time/doc_app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  // Set up dependency injection
   setUpGetIt();
+  
+  // Initialize app router
   final appRouter = AppRouter();
 
-  // Run the app and pass the appRouter to DocApp
+  // Run the app
   runApp(DocApp(appRouter: appRouter.router));
 }
