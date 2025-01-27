@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "240970429267",
+    "project_id": "docontime-7afdf",
+    "storage_bucket": "docontime-7afdf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240970429267:android:1a7f5c9466c824f48827a6",
+        "android_client_info": {
+          "package_name": "com.example.doc_on_time"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtZ6pS6FpSq_ASo1yD6gUDo-jIHBtSUHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
