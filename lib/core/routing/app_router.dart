@@ -3,6 +3,7 @@ import 'package:doc_on_time/featuers/home/ui/home_screen.dart';
 import 'package:doc_on_time/featuers/login/logic/login_cubit.dart';
 import 'package:doc_on_time/featuers/login/ui/login_screen.dart';
 import 'package:doc_on_time/featuers/onboadring/onboadring_screen.dart';
+import 'package:doc_on_time/featuers/signup/ui/signup_screen.dart';
 import 'package:doc_on_time/featuers/splash/splash_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -19,6 +20,10 @@ class AppRouter {
       GoRoute(
         path: Routes.onBoardingScreen,
         builder: (context, state) => const OnBoadringScreen(),
+      ),
+      GoRoute(
+        path: Routes.signupScreen,
+        builder: (context, state) => const SignupScreen(),
       ),
       GoRoute(
         path: Routes.homeScreen,
