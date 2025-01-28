@@ -5,4 +5,5 @@ class AppImages {
   static const String notifi = "assets/notifications.svg";
   static const String homeBluePattern = "assets/home_blue_pattern.png";
   static const String doctorHomeScreen = "assets/doctor-home-screen.png";
+  static const String generalSpeciality = "assets/general_speciality.svg";
 }

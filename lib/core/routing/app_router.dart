@@ -41,6 +41,6 @@ class AppRouter {
         ),
       ),
     ],
-    initialLocation: Routes.splashScreen,
+    initialLocation: Routes.homeScreen,
   );
 }

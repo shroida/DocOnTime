@@ -24,6 +24,7 @@ environment:
 dependencies:
   animated_text_kit: ^4.2.2
   build_runner: ^2.4.13
+  cached_network_image: ^3.4.1
   dio: ^5.7.0
   easy_localization: ^3.0.7
   firebase_core: ^3.10.1
@@ -45,6 +46,7 @@ dependencies:
   retrofit: ^4.4.2
   retrofit_generator: ^9.1.5
   shared_preferences: ^2.4.0
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_lints: ^4.0.0
@@ -60,6 +62,7 @@ flutter:
     - assets/logo_low_opacity.svg
     - assets/doc-removebg.png
     - assets/notifications.svg
+    - assets/general_speciality.svg
     - assets/home_blue_pattern.png
     - assets/doctor-home-screen.png
   # An image asset can refer to one or more resolution-specific "variants", see

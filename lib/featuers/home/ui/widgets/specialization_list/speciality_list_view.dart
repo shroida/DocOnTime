@@ -6,9 +6,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'speciality_list_view_item.dart';
 
 class SpecialityListView extends StatefulWidget {
-  final List<SpecializationsData?> specializationDataList;
+  // final List<SpecializationsData?> specializationDataList;
   const SpecialityListView(
-      {super.key, required this.specializationDataList});
+      {super.key,
+      
+      //  required this.specializationDataList
+       
+       });
 
   @override
   State<SpecialityListView> createState() =>
@@ -24,7 +28,7 @@ class _SpecialityListViewState extends State<SpecialityListView> {
       height: 100.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: widget.specializationDataList.length,
+        itemCount: 5,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
@@ -36,7 +40,7 @@ class _SpecialityListViewState extends State<SpecialityListView> {
               //     );
             },
             child: SpecialityListViewItem(
-              specializationsData: widget.specializationDataList[index],
+              // specializationsData: widget.specializationDataList[index],
               itemIndex: index,
               selectedIndex: selectedSpecializationIndex,
             ),
