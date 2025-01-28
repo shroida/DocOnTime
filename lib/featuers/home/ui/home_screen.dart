@@ -1,3 +1,4 @@
+import 'package:doc_on_time/featuers/home/ui/widgets/home_top_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,9 +12,9 @@ class HomeScreen extends StatelessWidget {
           child: Container(
               width: double.infinity,
               color: Colors.red[400],
-              margin: EdgeInsets.fromLTRB(20, 16, 20, 28),
+              margin: const EdgeInsets.fromLTRB(20, 16, 20, 28),
 
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   HomeTopBar()
