@@ -23,7 +23,6 @@ class AppRouter {
         path: Routes.onBoardingScreen,
         builder: (context, state) => const OnBoadringScreen(),
       ),
-    
       GoRoute(
         path: Routes.loginScreen,
         builder: (context, state) => BlocProvider(
@@ -31,11 +30,10 @@ class AppRouter {
           child: const LoginScreen(),
         ),
       ),
-    
       GoRoute(
         path: Routes.homeScreen,
         builder: (context, state) => BlocProvider(
-          create: (context) => HomeCubit(getIt()),
+          create: (context) => HomeCubit(getIt())..getSpecializations(),
           child: const HomeScreen(),
         ),
       ),
@@ -47,6 +45,6 @@ class AppRouter {
         ),
       ),
     ],
-    initialLocation: Routes.homeScreen,
+    initialLocation: Routes.splashScreen,
   );
 }

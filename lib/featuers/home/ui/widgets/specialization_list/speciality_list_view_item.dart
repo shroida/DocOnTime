@@ -1,4 +1,5 @@
 import 'package:doc_on_time/core/theming/app_styles.dart';
+import 'package:doc_on_time/core/utlis/app_images.dart';
 import 'package:doc_on_time/featuers/home/data/models/specializations_response_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -36,7 +37,7 @@ class SpecialityListViewItem extends StatelessWidget {
                     radius: 28,
                     backgroundColor: ColorsManager.lightBlue,
                     child: SvgPicture.asset(
-                      'assets/svgs/general_speciality.svg',
+                     AppImages.generalSpeciality,
                       height: 42.h,
                       width: 42.w,
                     ),
@@ -46,7 +47,7 @@ class SpecialityListViewItem extends StatelessWidget {
                   radius: 28,
                   backgroundColor: ColorsManager.lightBlue,
                   child: SvgPicture.asset(
-                    'assets/svgs/general_speciality.svg',
+                   AppImages.generalSpeciality,
                     height: 40.h,
                     width: 40.w,
                   ),

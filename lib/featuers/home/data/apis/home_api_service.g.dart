@@ -12,6 +12,7 @@ class _HomeApiService implements HomeApiService {
   _HomeApiService(
     this._dio, {
     this.baseUrl,
+    this.errorLogger,
   }) {
     baseUrl ??= 'https://vcare.integration25.com/api/';
   }
@@ -20,6 +21,7 @@ class _HomeApiService implements HomeApiService {
 
   String? baseUrl;
 
+  final ParseErrorLogger? errorLogger;
 
   @override
   Future<SpecializationsResponseModel> getSpecialization() async {
@@ -47,7 +49,8 @@ class _HomeApiService implements HomeApiService {
     late SpecializationsResponseModel _value;
     try {
       _value = SpecializationsResponseModel.fromJson(_result.data!);
-    } on Object {
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
       rethrow;
     }
     return _value;
