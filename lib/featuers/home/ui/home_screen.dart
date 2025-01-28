@@ -1,4 +1,6 @@
 import 'package:doc_on_time/core/helpers/spacing.dart';
+import 'package:doc_on_time/featuers/home/data/models/specializations_response_model.dart';
+import 'package:doc_on_time/featuers/home/ui/widgets/specialization_list/speciality_list_view.dart';
 import 'package:doc_on_time/featuers/home/ui/widgets/doctors_blue_container.dart';
 import 'package:doc_on_time/featuers/home/ui/widgets/doctors_speciality_see_all.dart';
 import 'package:doc_on_time/featuers/home/ui/widgets/home_top_bar.dart';
@@ -22,6 +24,8 @@ class HomeScreen extends StatelessWidget {
                   const DoctorsBlueContainer(),
                   verticalSpace(24),
                   const DoctorsSpecialitySeeAll(),
+                  verticalSpace(18),
+                  SpecialityListView(specializationDataList: [],)
                 ],
               )),
         ));
