@@ -1,7 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:doc_on_time/core/helpers/constants.dart';
 import 'package:doc_on_time/core/routing/routes.dart';
 import 'package:doc_on_time/core/theming/colors.dart';
 import 'package:doc_on_time/core/utlis/app_images.dart';
+import 'package:doc_on_time/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -17,13 +19,16 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    checkLoginSession();
+    _navigateBasedOnLoginStatus();
   }
 
-  Future<void> checkLoginSession() async {
+  Future<void> _navigateBasedOnLoginStatus() async {
+    await checkIfLoggedInUser();
     Future.delayed(const Duration(seconds: 3), () {
       if (mounted) {
-        context.pushReplacement(Routes.onBoardingScreen);
+        isLoggedInUser
+            ? context.go(Routes.homeScreen) // Navigate to Home
+            : context.go(Routes.onBoardingScreen); // Navigate to Onboarding
       }
     });
   }
@@ -40,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             SvgPicture.asset(
               AppImages.logo,
-              height: 70, 
+              height: 70,
             ),
             const SizedBox(width: 20),
             AnimatedTextKit(
@@ -49,7 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   'DocOnTime',
                   textStyle: const TextStyle(
                     color: ColorsManager.darkBlue,
-                    fontSize: 40, // Reduced for better scaling
+                    fontSize: 40,
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.center,
