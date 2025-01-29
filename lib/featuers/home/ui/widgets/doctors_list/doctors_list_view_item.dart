@@ -66,7 +66,7 @@ class DoctorsListViewItem extends StatelessWidget {
                 ),
                 verticalSpace(5),
                 Text(
-                  doctorsModel?.email ?? 'Email',
+                  doctorsModel?.gender ?? 'Email',
                   style: AppStyles.font12GrayMedium,
                 ),
               ],
